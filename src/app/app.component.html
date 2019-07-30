@@ -65,9 +65,9 @@
 
           <ion-menu-toggle autoHide="false">
             <ion-item routerLink="/login" routerDirection="root">
-              <ion-icon slot="start" name="log-in"></ion-icon>
+              <ion-icon slot="start" name="person"></ion-icon>
               <ion-label>
-                Login
+                Dealer Code (15310)
               </ion-label>
             </ion-item>
           </ion-menu-toggle>
@@ -76,32 +76,45 @@
             <ion-item routerLink="/support" routerDirection="root">
               <ion-icon slot="start" name="help"></ion-icon>
               <ion-label>
-                Support
+                Details
               </ion-label>
             </ion-item>
           </ion-menu-toggle>
 
           <ion-menu-toggle autoHide="false">
             <ion-item routerLink="/signup" routerDirection="root">
-              <ion-icon slot="start" name="person-add"></ion-icon>
+              <ion-icon slot="start" name="home"></ion-icon>
               <ion-label>
-                Signup
+                Warehouse Shipping Options
               </ion-label>
             </ion-item>
           </ion-menu-toggle>
-        </ion-list>
 
-        <ion-list>
-          <ion-list-header>
-            Tutorial
-          </ion-list-header>
           <ion-menu-toggle autoHide="false">
-            <ion-item button (click)="openTutorial()">
-              <ion-icon slot="start" name="hammer"></ion-icon>
-              <ion-label>Show Tutorial</ion-label>
+            <ion-item routerLink="/signup" routerDirection="root">
+              <ion-icon slot="start" name="book"></ion-icon>
+              <ion-label>
+                Address Book
+              </ion-label>
             </ion-item>
           </ion-menu-toggle>
+
+
+          <ion-menu-toggle autoHide="false">
+            <ion-item routerLink="/signup" routerDirection="root">
+              <ion-icon slot="start" name="log-out"></ion-icon>
+              <ion-label>
+                Logout
+              </ion-label>
+            </ion-item>
+          </ion-menu-toggle>
+
+
+
+
         </ion-list>
+
+
       </ion-content>
     </ion-menu>
 
