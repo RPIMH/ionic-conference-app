@@ -38,6 +38,11 @@ export class AppComponent implements OnInit {
       title: 'Claims And Returns',
       url: '/app/tabs/about',
       icon: 'paper'
+    },
+    {
+      title: 'Cart',
+      url: '/app/tabs/about',
+      icon: 'cart'
     }
   ];
   loggedIn = false;

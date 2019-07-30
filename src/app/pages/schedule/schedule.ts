@@ -22,6 +22,38 @@ export class SchedulePage implements OnInit {
   shownSessions: any = [];
   groups: any = [];
   confDate: string;
+  slideOpts = {
+    initialSlide: 1,
+    speed: 400,
+    loop: true,
+    autoplay: {
+      delay: 4000
+    }
+  };
+  slides =  [
+    {
+      "image": "/assets/img/home_feature_1.PNG",
+      "imageAlt": "Feature 1 Alt Text"
+    },
+    {
+      "image": "/assets/img/home_feature_2.PNG",
+      "imageAlt": "Feature 2 Alt Text"
+    }
+  ];
+  newsArticles = [
+    {
+      "title": "Simplified DealerNet Claims Page",
+      "text": `We are pleased to announce that our DealerNet Claims page has been redesigned with our dealers in mind.
+       The new page makes submitting ‘Freight Only’ claims and ‘Received Parts Not Ordered’ claims quicker and easier. `,
+       "datePosted": "July 22nd, 2019"
+    },
+    {
+      "title": "Forklifts on the rise!",
+      "text": `Recent advancements in AI technology have produced sentient forklifts with superior intelligence. 
+              Is this the end for humanity?`,
+       "datePosted": "July 30th, 2019"
+    }
+  ];
 
   constructor(
     public alertCtrl: AlertController,
