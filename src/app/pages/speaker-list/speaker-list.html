@@ -12,14 +12,14 @@
   <ion-list>
     <ion-grid fixed>
       <ion-row class="ion-align-items-stretch">
-        <ion-col size="12" size-md="6" *ngFor="let cat of popularCategories">
+        <ion-col size="6" size-md="3" *ngFor="let cat of popularCategories">
           <ion-card class="speaker-card">
             <ion-card-header>
                 <img [src]="cat.image"/>
-                <ion-card-title>{{cat.title}}</ion-card-title>
+                <ion-card-title style="margin-left: 6px;">{{cat.title}}</ion-card-title>
             </ion-card-header>
             <ion-card-content>
-              <ion-item style="margin-left: 6px;" *ngFor="let link of cat.subLinks">{{link.title}}</ion-item>
+              <ion-item *ngFor="let link of cat.subLinks">{{link.title}}</ion-item>
             </ion-card-content>
           </ion-card>
         </ion-col>

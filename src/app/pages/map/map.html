@@ -3,10 +3,46 @@
     <ion-buttons slot="start">
       <ion-menu-button></ion-menu-button>
     </ion-buttons>
-    <ion-title>Map</ion-title>
+    <ion-title>Orders</ion-title>
   </ion-toolbar>
 </ion-header>
 
 <ion-content>
-  <div #mapCanvas class="map-canvas"></div>
+    <ion-list>
+        <ion-radio-group>
+          <ion-list-header>
+            View
+          </ion-list-header>
+      
+          <ion-item>
+            <ion-label>Orders</ion-label>
+            <ion-radio value="orders"></ion-radio>
+          </ion-item>
+      
+          <ion-item>
+            <ion-label>Backorders</ion-label>
+            <ion-radio value="backorders"></ion-radio>
+          </ion-item>
+      
+          <ion-item>
+            <ion-label>Invoices</ion-label>
+            <ion-radio value="invoices"></ion-radio>
+          </ion-item>
+      
+          <ion-item>
+            <ion-label>Credits</ion-label>
+            <ion-radio value="credits"></ion-radio>
+          </ion-item>
+      
+          <ion-item>
+            <ion-label>Quotes</ion-label>
+            <ion-radio value="quotes"></ion-radio>
+          </ion-item>
+
+          <ion-item>
+              <ion-label>Part Store Orders</ion-label>
+              <ion-radio value="partStoreOrders"></ion-radio>
+            </ion-item>
+        </ion-radio-group>
+      </ion-list>
 </ion-content>
