@@ -13,36 +13,120 @@
           <ion-list-header>
             View
           </ion-list-header>
-      
-          <ion-item>
-            <ion-label>Orders</ion-label>
-            <ion-radio value="orders"></ion-radio>
-          </ion-item>
-      
-          <ion-item>
-            <ion-label>Backorders</ion-label>
-            <ion-radio value="backorders"></ion-radio>
-          </ion-item>
-      
-          <ion-item>
-            <ion-label>Invoices</ion-label>
-            <ion-radio value="invoices"></ion-radio>
-          </ion-item>
-      
-          <ion-item>
-            <ion-label>Credits</ion-label>
-            <ion-radio value="credits"></ion-radio>
-          </ion-item>
-      
-          <ion-item>
-            <ion-label>Quotes</ion-label>
-            <ion-radio value="quotes"></ion-radio>
-          </ion-item>
-
-          <ion-item>
-              <ion-label>Part Store Orders</ion-label>
-              <ion-radio value="partStoreOrders"></ion-radio>
-            </ion-item>
+          <ion-row class="ion-align-items-stretch">
+            <ion-col size="6" size-md="3" *ngFor="let orderType of orderTypes">
+              <ion-item>
+                <ion-label>{{orderType.title}}</ion-label>
+                <ion-radio [checked]="orderType.default === true" [value]="orderType.value"></ion-radio>
+              </ion-item>
+            </ion-col>
+          </ion-row>
         </ion-radio-group>
       </ion-list>
+
+      <h3 style="margin-left: 6px;">Orders</h3>
+      <ion-row>
+        <ion-col size="12">
+          <ion-item>
+            <ion-label>Month</ion-label>
+            <ion-select value="july2019" okText="Okay" cancelText="Dismiss">
+              <ion-select-option value="july2019">July 2019</ion-select-option>
+              <ion-select-option value="june2019">June 2019</ion-select-option>
+              <ion-select-option value="may2019">May 2019</ion-select-option>
+            </ion-select>
+          </ion-item>
+        </ion-col>
+
+        <ion-col size="12">
+          <ion-item>
+            <ion-label>Dealer</ion-label>
+            <ion-select value="dealer1" okText="Okay" cancelText="Dismiss">
+              <ion-select-option value="dealer1">Dealer 1</ion-select-option>
+              <ion-select-option value="dealer2">Dealer 2</ion-select-option>
+              <ion-select-option value="dealer3">Dealer 3</ion-select-option>
+            </ion-select>
+          </ion-item>
+        </ion-col>
+      </ion-row>
+
+
+      <ion-row>
+        <ion-col size="12" align-self="center">
+              <ion-button expand="block" color="primary" size="large">View</ion-button>
+        </ion-col>
+      </ion-row>
+
+      <ion-row class="ion-align-items-stretch">
+        <ion-col size="12" size-md="6" *ngFor="let order of orders">
+          <ion-card class="speaker-card">
+            <ion-card-content>
+              <ion-grid>
+
+
+                <ion-row>
+                  <ion-col>
+                    <div>
+                      {{order.OrderNumber}}
+                    </div>
+                  </ion-col>
+                  <ion-col>
+                    <div>
+                      {{order.SalesOrg}}
+                    </div>
+                  </ion-col>
+                  <ion-col>
+                    <div>
+                      {{order.Origin}}
+                    </div>
+                  </ion-col>
+                </ion-row>
+
+                <ion-row>
+                    <ion-col>
+                      <div>
+                          {{order.PONumber}}
+                      </div>
+                    </ion-col>
+                    <ion-col>
+                      <div>
+                          {{order.Date}}
+                      </div>
+                    </ion-col>
+                    <ion-col>
+                      <div>
+                          {{order.Status}}
+                      </div>
+                    </ion-col>
+                  </ion-row>
+
+
+                  <ion-row>
+                      <ion-col>
+                        <div>
+                            --
+                        </div>
+                      </ion-col>
+                      <ion-col>
+                        <div>
+                            {{order.OrderType}}
+                        </div>
+                      </ion-col>
+                      <ion-col>
+                        <div>
+                            {{order.Total}}
+                        </div>
+                      </ion-col>
+                    </ion-row>
+
+
+              </ion-grid>
+            </ion-card-content>
+          </ion-card>
+        </ion-col>
+      </ion-row>
+      
+      
+
+
+
 </ion-content>

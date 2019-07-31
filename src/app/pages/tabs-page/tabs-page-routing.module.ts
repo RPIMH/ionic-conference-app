@@ -49,6 +49,15 @@ const routes: Routes = [
         ]
       },
       {
+        path: 'createclaim',
+        children: [
+          {
+            path: '',
+            loadChildren: () => import('../createclaim/createclaim.module').then(m => m.CreateClaimModule)
+          }
+        ]
+      },
+      {
         path: 'about',
         children: [
           {

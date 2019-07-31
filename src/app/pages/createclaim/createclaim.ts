@@ -3,11 +3,11 @@ import { ConferenceData } from '../../providers/conference-data';
 import { Platform } from '@ionic/angular';
 
 @Component({
-  selector: 'page-map',
-  templateUrl: 'map.html',
-  styleUrls: ['./map.scss']
+  selector: 'page-createclaim',
+  templateUrl: 'createclaim.html',
+  styleUrls: ['./createclaim.scss']
 })
-export class MapPage implements AfterViewInit {
+export class CreateClaimPage implements AfterViewInit {
   @ViewChild('mapCanvas', { static: true }) mapElement: ElementRef;
 
 
